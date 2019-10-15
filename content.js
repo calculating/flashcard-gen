@@ -4,7 +4,7 @@ var latinWord = 'placeholder';
 var words = [];
 
 chrome.runtime.onMessage.addListener(gotMessage)
-function gotMessage(msg, sender, sendResponse) {
+let gotMessage = (msg, sender, sendResponse) => {
     console.log(msg);
     console.log(words);
     sendResponse(words);
@@ -12,7 +12,7 @@ function gotMessage(msg, sender, sendResponse) {
 
 window.addEventListener('mouseup', wordSelected);
 
-function wordSelected() {
+let wordSelected = () => {
   console.log('variables: ' + latinSel + ' ' + latinWord + ' ' + words)
   let sel = window.getSelection().toString().trim();
   if (latinSel == false) {
