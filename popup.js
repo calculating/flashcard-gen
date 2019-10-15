@@ -18,12 +18,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
         });
         console.log('sent');
       }
-    document.getElementById("nextSlide").addEventListener("click", nextSlide);
-    document.getElementById("flip").addEventListener("click", flip);
+    document.getElementById("click").addEventListener("click", nextSlide);
 });
+slide = 0
 function nextSlide() {
-    document.getElementById("p1").innerHTML = "blipblop";
-}
-function flip() {
-    document.getElementById("p1").innerHTML = "blorp";
+    console.log(words[slide]);
+    document.getElementById("text").innerHTML = words[slide];
+    slide++
 }
