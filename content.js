@@ -1,7 +1,7 @@
 console.log("go go go");
 var latinSel = true;
 var latinWord = 'placeholder';
-var words = [];
+var words = ["flashcards"];
 var toggled = false;
 
 chrome.runtime.onMessage.addListener(gotMessage)
@@ -16,8 +16,10 @@ function gotMessage(msg, sender, sendResponse) {
     grabWords(toggled);
   } else {
     console.log(msg);
-    console.log(words);
     sendResponse(words);
+    chrome.storage.sync.set({flash: words}, function() {
+      console.log('The flashcard set is set to' + words);
+    });
   }
 };
 
@@ -52,7 +54,7 @@ function grabWords(tog) {
       for ( var l = 0; l < allWords; l++) {
         var text = obj[l].textContent;
         console.log(text + l);
-        result[l] = "<span onmouseover= this.style.color='orange' onmouseout= this.style.color='black' id='clickable'>" + text + '</span>' + ' – ';
+        result[l] = "<span onmouseover= this.style.color='blue' onmouseout= this.style.color='black' id='clickable'>" + text + '</span>' + ' – ';
       }
       pars[i].innerHTML = result.join(" ");
     }
