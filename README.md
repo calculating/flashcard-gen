@@ -1,2 +1,3 @@
-# flashcard-extension
-Chrome extension for automated flashcard generation and management.
+In Latin class we got extra credit for making flashcards for our vocab sets, so I automated it and got free credit for the rest of the year.
+![gif showing the wordlist extraction process](extract_vocab.gif "extracting words")
+![gif showing the flashcard viewing interface](view_cards.gif "fashcarding")
