@@ -1,4 +1,4 @@
-In Latin class we got extra credit for making flashcards for our vocab sets, so I automated it and got free credit for the rest of the year.
+In Latin class we got extra credit for making flashcards for our vocab sets, so I automated it.
 
 ![gif showing the wordlist extraction process](extract_vocab.gif "extracting words") 
 
